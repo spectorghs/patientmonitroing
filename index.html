@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareSync | Patient Monitoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="logo">
+                <i class="fas fa-heartbeat pulse"></i>
+                <h1>CareSync</h1>
+                <p>Real-Time Patient Monitoring</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="loginTab">Login</button>
+                <button class="tab-btn" id="signupTab">Sign Up</button>
+            </div>
+            
+            <div class="auth-content">
+                <form class="login-form active" id="loginForm">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <span>Login</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <p class="auth-switch">Don't have an account? <span id="toSignup">Sign up</span></p>
+                </form>
+                
+                <form class="signup-form" id="signupForm">
+                    <div class="role-selector">
+                        <label class="role-option active" data-role="family">
+                            <i class="fas fa-user"></i>
+                            <span>Family Member</span>
+                        </label>
+                        <label class="role-option" data-role="caretaker">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Caretaker</span>
+                        </label>
+                        <input type="hidden" id="userRole" name="role" value="family">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="signupName" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">
+                        <span>Create Account</span>
+                        <i class="fas fa-user-plus"></i>
+                    </button>
+                    <p class="auth-switch">Already have an account? <span id="toLogin">Login</span></p>
+                </form>
+            </div>
+        </div>
+        
+        <div class="waves">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
